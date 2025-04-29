@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  hyvie:
+    build: .
+    container_name: hyvie
+    restart: unless-stopped
+    ports:
+      - "5835:5835"
+    environment:
+      - STATUS_CHECK_INTERVAL=60
+      - STATUS_CHECK_TIMEOUT=3
+      - DISABLE_STATUS_CHECK=false
+      - MAX_FAVORITES_DISPLAYED=10
+      - STORAGE_TYPE=json
+      - STORAGE_PATH=/data/hyvie-config.json
+    volumes:
+      - hyvie-data:/data
+    networks:
+      - hyvie-network
+
+volumes:
+  hyvie-data:
+    name: hyvie-data
+
+networks:
+  hyvie-network:
+    name: hyvie-network
