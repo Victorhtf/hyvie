@@ -1,6 +1,6 @@
 # Hyvie
 
-Um dashboard elegante e personalizável para gerenciar e acessar todos os seus serviços em um só lugar, inspirado no conceito de colmeia (hive).
+Um dashboard personalizável para gerenciar e acessar todos os seus serviços em um só lugar, inspirado no conceito de colmeia (hive).
 
 ![Hyvie Screenshot](screenshot.png)
 
